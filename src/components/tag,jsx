@@ -1,0 +1,29 @@
+import React from "react";
+
+const CustomTagIcon = ({ size = 40, color = "#B0B8C4", strokeWidth = 3, ...props }) => (
+  <svg
+    width={size}
+    height={(size * 38) / 40}
+    viewBox="0 0 40 38"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M36.2007 36H12.7997C12.325 36.0011 11.8548 35.9038 11.4161 35.7135C10.9774 35.5232 10.5789 35.2437 10.2436 34.8912L3.05408 27.3376C2.37915 26.6291 2 25.6684 2 24.6667C2 23.665 2.37915 22.7043 3.05408 21.9958L21.0548 3.10702C21.3892 2.75606 21.7861 2.47766 22.223 2.28771C22.6599 2.09777 23.1282 2 23.6011 2C24.074 2 24.5422 2.09777 24.9791 2.28771C25.416 2.47766 25.8129 2.75606 26.1473 3.10702L36.9459 14.4403C37.6208 15.1487 38 16.1095 38 17.1112C38 18.1129 37.6208 19.0736 36.9459 19.7821L21.5013 36"
+      stroke={color}
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M7.53906 17.2805L23.4301 33.9555"
+      stroke={color}
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export default CustomTagIcon;
