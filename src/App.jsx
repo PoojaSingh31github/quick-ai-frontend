@@ -10,16 +10,9 @@ import ReviewResume from "./pages/ReviewResume";
 import Community from "./pages/Community";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./pages/Layout";
-import { useAuth } from "@clerk/clerk-react";
 import {Toaster } from "react-hot-toast";
 
-
 function App() {
-  
-  const { getToken } = useAuth();
-  useEffect(() => {
-    getToken().then((token) => console.log(token));
-  }, []);
 
   return (
     <div>
