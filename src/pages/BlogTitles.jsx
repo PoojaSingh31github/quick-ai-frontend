@@ -60,7 +60,7 @@ const BlogTitles = () => {
     setLoading(false);
   };
   return (
-    <div className="h-full overflow-y-scroll p-6 flex items-start flex-wrap gap-4 text-slate-700">
+    <div className="h-full overflow-y-scroll scrollbar-custom p-6 flex items-start flex-wrap gap-4 text-slate-700">
       {/* left col */}
       <form
         onSubmit={onSubmitHandler}
@@ -109,7 +109,7 @@ const BlogTitles = () => {
         </div>
         <div className="flex-1 flex justify-center items-center">
           {titles ? (
-            <div className="text-sm flex flex-col items-start gap-5 text-gray-700 overflow-y-scroll">
+            <div className="text-sm flex flex-col items-start gap-5 text-gray-700 scrollbar-custom overflow-y-scroll">
               <ReactMarkdown>{titles}</ReactMarkdown>
             </div>
           ) : (

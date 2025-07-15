@@ -21,19 +21,19 @@
 
 /* ===== Custom Scrollbar ===== */
 .scrollbar-custom::-webkit-scrollbar {
-  width: 8px;
+  width: 2px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background: #00DA83;
-  border-radius: 10px;
+  background: #98a1ff;
+  border-radius: 2px;
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-  background: #009BB3;
+  background: #81e1ef;
 }

@@ -53,14 +53,14 @@ const Community = () => {
 
   return (
     <div className="p-3">
-      <h1 className="text-xl font-semibold mb-2">Creations</h1>
+      <h1 className="text-lg mb-2">Creations</h1>
 
       {loading ? (
         <div className="w-full flex justify-center items-center h-[300px]">
           <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pr-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-h-[calc(100vh-120px)] scrollbar-custom overflow-y-auto  p-3 bg-white">
           {creations.map((creation) => (
             <div
               key={creation._id}
@@ -69,7 +69,7 @@ const Community = () => {
               <img
                 src={creation.context}
                 alt={creation.prompt}
-                className="w-full h-[250px] object-cover transition-transform group-hover:scale-105 duration-300"
+                className="w-full h-[400px] object-cover transition-transform group-hover:scale-105 duration-300"
                 onError={(e) => (e.target.src = "/fallback.png")}
               />
 
