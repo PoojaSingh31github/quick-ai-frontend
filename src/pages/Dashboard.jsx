@@ -3,6 +3,12 @@ import { dummyCreationData } from '../assets/assets'
 import { Gem, Sparkles } from 'lucide-react'
 import { Protect } from '@clerk/clerk-react'
 import CreationItem from '../components/CreationItem'
+import { useAuth } from "@clerk/clerk-react";
+import toast from "react-hot-toast";
+import ReactMarkdown from "react-markdown";
+
+axios.defaults.baseURL =
+  import.meta.env.VITE_BASE_URL || "http://localhost:3000";
 
 const Dashboard = () => {
   const [creations, setCreations] = useState([])
@@ -10,6 +16,24 @@ const Dashboard = () => {
   const getDashboardData = async () => {
     setCreations(dummyCreationData);
   }
+
+  const { getToken } = useAuth();
+  const fetchCreations = async () => {
+    try {
+      const token = await getToken();
+      const response = await axios.get('/dashboard', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (response.status === 200) {
+        setCreations(response.data.creations);
+      } else {
+        toast.error("Failed to fetch creations");
+      }
+    } catch (error) {
+      toast.error(error.message || "Failed to fetch creations. Please try again later.");
+      console.error("Error fetching creations:", error);
+    }
+  };
   useEffect(() => {
     getDashboardData();
   }, [])
