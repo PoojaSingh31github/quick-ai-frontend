@@ -44,10 +44,11 @@ const RemoveObject = () => {
       setInput("");
     } catch (error) {
       toast.error(
-        error.message || "Failed to remove object. Please try again later."
+        error?.response?.data?.message || "Failed to remove object. Please try again later."
       );
       console.error("Error removing object:", error);
     }
+    setLoading(false);
   };
   return (
     <div className="h-full overflow-y-scroll scrollbar-custom p-6 flex items-start flex-wrap gap-4 text-slate-700">

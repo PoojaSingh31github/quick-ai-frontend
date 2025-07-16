@@ -55,7 +55,7 @@ const GenerateImages = () => {
     } catch (error) {
       setLoading(false);
       toast.error(
-        error.message || "Failed to generate image. Please try again later."
+        error?.response?.data?.message || "Failed to generate image. Please try again later."
       );
       console.error("Error generating image:", error);
       setError("Failed to generate image. Please try again later.");

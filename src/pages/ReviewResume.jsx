@@ -45,7 +45,8 @@ const ReviewResume = () => {
       setInput("");
     } catch (error) {
       toast.error(
-        error.message || "Failed to review resume. Please try again later."
+        error?.response?.data?.message ||
+          "Failed to review resume. Please try again later."
       );
       setLoading(false);
       console.error("Error reviewing resume:", error);

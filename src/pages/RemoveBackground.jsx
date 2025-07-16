@@ -51,7 +51,7 @@ const RemoveBackground = () => {
     } catch (error) {
       setLoading(false);
       toast.error(
-        error.message || "Failed to remove background. Please try again later."
+        error?.response?.data?.message || "Failed to remove background. Please try again later."
       );
       console.error("Error removing background:", error);
       setError("Failed to remove background. Please try again later.");

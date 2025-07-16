@@ -112,7 +112,7 @@ const WriteArticle = () => {
         </div>
         <div className="flex-1 flex justify-center items-center">
           {article ? (
-            <div className="text-sm flex flex-col items-start gap-5 text-gray-700 scrollbar-custom overflow-y-scroll">
+            <div className="text-sm flex flex-col items-start gap-5 text-gray-700 scrollbar-custom overflow-y-scroll max-h-[540px]">
               <ReactMarkdown>{article}</ReactMarkdown>
             </div>
           ) : (
