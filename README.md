@@ -1,14 +1,62 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✅ `quick-ai-client/README.md`
 
-Currently, two official plugins are available:
+# ⚡ Quick AI - Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is the frontend of **Quick AI**, a multi-tool generative AI web app. It enables users to generate articles, remove image backgrounds, analyze resumes, and more — all with a clean and modern UI.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Quick.ai
-"# quick-ai-frontend" 
+## ✨ Features
+
+- 🧠 Article, blog, and resume generation using AI
+- 📷 Background removal via AI
+- 🔒 Clerk authentication
+- ❤️ Like/dislike & public creations
+- 📄 Markdown rendering
+- ☁️ Connected to Cloudinary for image hosting
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 19**
+- **Vite**
+- **Tailwind CSS 4**
+- **Clerk for Auth**
+- **Axios for API calls**
+- **Lucide Icons**
+- **React Router v7**
+- **React Markdown**
+- **React Hot Toast**
+
+---
+
+## 🧩 Folder Structure
+```
+quick-ai-client/
+│
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Individual tool pages
+│ ├── context/ # Auth & state management
+│ ├── utils/ # Helper functions
+│ └── App.jsx # Main App component
+├── public/ # Static files
+└── tailwind.config.js # Tailwind CSS config
+
+```
+
+---
+
+## 🧪 Run Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+
