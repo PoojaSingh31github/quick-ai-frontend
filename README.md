@@ -37,14 +37,48 @@ This is the frontend of **Quick AI**, a multi-tool generative AI web app. It ena
 ```
 quick-ai-client/
 │
+├── public/                        # Static assets
+│
 ├── src/
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Individual tool pages
-│ ├── context/ # Auth & state management
-│ ├── utils/ # Helper functions
-│ └── App.jsx # Main App component
-├── public/ # Static files
-└── tailwind.config.js # Tailwind CSS config
+│   ├── assets/                    # Images, SVGs, etc.
+│
+│   ├── components/                # Reusable UI Components
+│   │   ├── AITools.jsx
+│   │   ├── CreationItem.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Plan.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Testimonial.jsx
+│   │   └── Tag.jsx
+│
+│   ├── pages/                     # Main page views
+│   │   ├── BlogTitles.jsx
+│   │   ├── Community.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── GenerateImages.jsx
+│   │   ├── Home.jsx
+│   │   ├── Layout.jsx
+│   │   ├── RemoveBackground.jsx
+│   │   ├── RemoveObject.jsx
+│   │   ├── ReviewResume.jsx
+│   │   └── WriteArticle.jsx
+│
+│   ├── App.jsx                    # Root component
+│   ├── index.css                  # Global styles
+│   └── main.jsx                   # App entry point
+│
+├── .env                           # Environment variables
+├── .gitignore
+├── README.md                      # This file!
+├── index.html
+├── eslint.config.js
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── package-lock.json
+
 
 ```
 
